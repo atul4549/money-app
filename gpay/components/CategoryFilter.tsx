@@ -32,6 +32,8 @@ const CategoryFilter = ({
             ]}
             onPress={() => onSelectCategory(category)}
             activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel={`Filter by ${category}`}
           >
             <Text
               style={[

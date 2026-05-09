@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    backgroundColor: '#667eea',
+    // backgroundColor: '#667eea',
   },
   header: {
     paddingTop: 60,

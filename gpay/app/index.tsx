@@ -30,10 +30,10 @@ const categories = [
 ];
 export default function HomeScreen() {
   const router = useRouter();
-  const [currentQuote, setCurrentQuote] = useState(quotes[0]);
+  const [currentQuote, setCurrentQuote] = useState(quotes[0] || null);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [fadeAnim] = useState(new Animated.Value(1));
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState<Quote[]>([]);
   const [scaleAnim] = useState(new Animated.Value(1));
 
   useEffect(() => {
@@ -98,6 +98,7 @@ export default function HomeScreen() {
       do {
         newQuote = filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)];
       } while (newQuote?.id === currentQuote?.id);
+      // } while (newQuote?.id === currentQuote?.id && attempts < maxAttempts);
     } else {
       newQuote = filteredQuotes[0];
     }
@@ -126,7 +127,8 @@ export default function HomeScreen() {
         title: 'Share Quote',
       });
     } catch (error: unknown) {
-      console.error('Error sharing:', error.message);
+      // console.error('Error sharing:', error.message);
+      console.error('Error sharing:', error instanceof Error ? error.message : error);
     }
   };
 

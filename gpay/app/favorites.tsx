@@ -6,7 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
   SafeAreaView,
-  Alert,
+  // Alert,
   Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -15,7 +15,8 @@ import { Quote } from '@/types/quote';
 
 export default function FavoritesScreen() {
   const router = useRouter();
-  const [favorites, setFavorites] = useState([]);
+  // const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState<Quote[]>([]);
 
   useEffect(() => {
     loadFavorites();
@@ -32,28 +33,28 @@ export default function FavoritesScreen() {
     }
   };
 
-  const removeFavorite = async (quoteId: any) => {
-    Alert.alert(
-      'Remove Favorite',
-      'Are you sure you want to remove this quote?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Remove',
-          style: 'destructive',
-          onPress: async () => {
-            const newFavorites = favorites.filter((f: Quote) => f.id !== quoteId);
-            setFavorites(newFavorites);
-            try {
-              await AsyncStorage.setItem('favorites', JSON.stringify(newFavorites));
-            } catch (error) {
-              console.error('Error removing favorite:', error);
-            }
-          },
-        },
-      ]
-    );
-  };
+  // const removeFavorite = async (quoteId: number) => {
+  //   Alert.alert(
+  //     'Remove Favorite',
+  //     'Are you sure you want to remove this quote?',
+  //     [
+  //       { text: 'Cancel', style: 'cancel' },
+  //       {
+  //         text: 'Remove',
+  //         style: 'destructive',
+  //         onPress: async () => {
+  //           const newFavorites = favorites.filter((f: Quote) => f.id !== quoteId);
+  //           setFavorites(newFavorites);
+  //           try {
+  //             await AsyncStorage.setItem('favorites', JSON.stringify(newFavorites));
+  //           } catch (error) {
+  //             console.error('Error removing favorite:', error);
+  //           }
+  //         },
+  //       },
+  //     ]
+  //   );
+  // };
 
   const shareQuote = async (quote: any) => {
     try {

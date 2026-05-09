@@ -281,26 +281,29 @@ export const quotes = [
 ];
 
 // Helper function to get quotes by category
-export const getQuotesByCategory = (category: any) => {
+export const getQuotesByCategory = (category: string) => {
   return quotes.filter(quote => quote.category === category);
 };
 
 // Helper function to get quotes by subcategory
-export const getQuotesBySubcategory = (subcategory: any) => {
+export const getQuotesBySubcategory = (subcategory: string) => {
   return quotes.filter(quote => quote.subcategory === subcategory);
 };
 
 // Helper function to get random quote
-export const getRandomQuote = (category = null) => {
+export const getRandomQuote = (category: string | null = null) => {
   const filtered = category ? getQuotesByCategory(category) : quotes;
+  if (filtered.length === 0) {
+    return null;
+  }
   return filtered[Math.floor(Math.random() * filtered.length)];
 };
 
 // Helper function to get quotes by text search
-export const searchQuotes = (searchTerm: any) => {
+export const searchQuotes = (searchTerm: string) => {
   const term = searchTerm.toLowerCase();
   return quotes.filter(quote => 
-    quote.text.toLowerCase().includes(term) || 
-    quote.author.toLowerCase().includes(term)
+    quote.text?.toLowerCase().includes(term) || 
+    quote.author?.toLowerCase().includes(term)
   );
 };

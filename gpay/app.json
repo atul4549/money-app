@@ -14,9 +14,9 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "https://png.pngtree.com/png-clipart/20250308/original/pngtree-adorable-happy-cartoon-girl-smiling-cheerfully-png-image_20597459.png",
-        "backgroundImage": "https://png.pngtree.com/png-clipart/20250308/original/pngtree-adorable-happy-cartoon-girl-smiling-cheerfully-png-image_20597459.png",
-        "monochromeImage": "https://png.pngtree.com/png-clipart/20250308/original/pngtree-adorable-happy-cartoon-girl-smiling-cheerfully-png-image_20597459.png"
+        "foregroundImage": "./assets/logo.png",
+        "backgroundImage": "./assets/logo.png",
+        "monochromeImage": "./assets/logo.png"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
