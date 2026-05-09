@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Himanshu Quotes",
+    "slug": "gpay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "https://thumbs.dreamstime.com/b/happy-boy-cartoon-illustration-smiling-child-hands-cheeks-cheerful-his-big-smile-376270151.jpg?w=768",
+    "scheme": "gpay",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "https://png.pngtree.com/png-clipart/20250308/original/pngtree-adorable-happy-cartoon-girl-smiling-cheerfully-png-image_20597459.png",
+        "backgroundImage": "https://png.pngtree.com/png-clipart/20250308/original/pngtree-adorable-happy-cartoon-girl-smiling-cheerfully-png-image_20597459.png",
+        "monochromeImage": "https://png.pngtree.com/png-clipart/20250308/original/pngtree-adorable-happy-cartoon-girl-smiling-cheerfully-png-image_20597459.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
