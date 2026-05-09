@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Himanshu Quotes",
-    "slug": "gpay",
+    "slug": "himanshu-quotes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "https://thumbs.dreamstime.com/b/happy-boy-cartoon-illustration-smiling-child-hands-cheeks-cheerful-his-big-smile-376270151.jpg?w=768",
-    "scheme": "gpay",
+    "scheme": "himanshu-quotes",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
